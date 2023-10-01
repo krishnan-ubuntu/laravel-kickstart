@@ -10,7 +10,7 @@
             <li>Logout</li>
             <li>Logout API</li>
         </ol>
-        <li>Free Bootstrap theme for web app</li>
+        <li><del>Free Bootstrap theme for web app</del></li>
         <li>Logged user profile</li>
         <li>Change password</li>
         <li>Create user</li>
