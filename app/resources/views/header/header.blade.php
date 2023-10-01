@@ -55,33 +55,15 @@
               </a>
             </li>
             <li>
-              <a href="tasks/mine">
+              <a href="/admin">
                 <i class="nc-icon nc-minimal-right"></i>
-                <p><b>My Tasks</b></p>
+                <p><b>Admin</b></p>
               </a>
             </li>
             <li>
-              <a href="tasks/create">
+              <a href="/reports">
                 <i class="nc-icon nc-minimal-right"></i>
-                <p><b>New Task</b></p>
-              </a>
-            </li>
-            <li>
-              <a href="tasks/assigned-by-me">
-                <i class="nc-icon nc-minimal-right"></i>
-                <p><b>Assigned by Me</b></p>
-              </a>
-            </li>
-            <li>
-              <a href="tasks/assigned-to-me">
-                <i class="nc-icon nc-minimal-right"></i>
-                <p><b>Assigned to Me</b></p>
-              </a>
-            </li>
-            <li>
-              <a href="tasks">
-                <i class="nc-icon nc-minimal-right"></i>
-                <p><b>All Tasks</b></p>
+                <p><b>Reports</b></p>
               </a>
             </li>
         </ul>
@@ -111,7 +93,7 @@
 
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <div>
-              <input class="form-control" type="text" placeholder="Search for tasks">
+              <input class="form-control" type="text" placeholder="Enter search query">
             </div>
             <ul class="navbar-nav">
               <li class="nav-item btn-rotate dropdown" id="notificationsApp">
@@ -132,13 +114,8 @@
                   <p><b>Profile</b></p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <span id="headerapp">
                     <a class="dropdown-item" href="my-profile">Profile</a>
-                    <span v-if="isAdmin === 'yes'">
-                    <a class="dropdown-item" href="/admin">Admin</a>
-                    </span>
                     <a class="dropdown-item" href="/logout">Logout</a>
-                  </span>
                 </div>
               </li>
             </ul>

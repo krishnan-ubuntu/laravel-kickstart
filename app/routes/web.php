@@ -34,3 +34,9 @@ Route::get('/home', 'App\Http\Controllers\web\HomeController@index');
 
 Route::get('/dashboard', 'App\Http\Controllers\web\DashboardController@index');
 
+Route::get('/admin', 'App\Http\Controllers\web\AdminController@index');
+
+Route::get('/reports', 'App\Http\Controllers\web\ReportsController@index');
+
+
+

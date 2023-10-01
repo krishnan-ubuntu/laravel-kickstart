@@ -18,7 +18,7 @@
               </div>
               <div class="col-7 col-md-8">
                 <div class="numbers">
-                 <p class="card-category">Tickets</p>
+                 <p class="card-category">Metric 1</p>
                  <p class="card-title">100</p>
                  </div>
                </div>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-7 col-md-8">
                   <div class="numbers">
-                    <p class="card-category">Resolved percentage</p>
+                    <p class="card-category">Metric 2</p>
                     <p class="card-title">50%</p>
                   </div>
                 </div>
@@ -69,7 +69,7 @@
               </div>
               <div class="col-7 col-md-8">
                 <div class="numbers">
-                  <p class="card-category">Escalation percentage</p>
+                  <p class="card-category">Metric 3</p>
                   <p class="card-title">20%</p>
                   </div>
                 </div>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="col-7 col-md-8">
                   <div class="numbers">
-                    <p class="card-category">Projects</p>
+                    <p class="card-category">Metric 4</p>
                     <p class="card-title">4</p>
                   </p>
                 </div>
@@ -112,11 +112,11 @@
       </div>
     </div>
   </div>
-  <!-- <div class="row">
+  <div class="row">
     <div class="col-md-12">
       <div class="card ">
         <div class="card-header ">
-          <h5 class="card-title">Guests Feedback</h5>
+          <h5 class="card-title">Metric 5</h5>
           <p class="card-category">24 Hours performance</p>
         </div>
         <div class="card-body ">
@@ -130,12 +130,12 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
   <div class="row">
     <div class="col-md-4">
       <div class="card ">
         <div class="card-header ">
-          <h5 class="card-title">Tickets</h5>
+          <h5 class="card-title">Metric 6</h5>
           <!-- <p class="card-category">Last Campaign Performance</p> -->
         </div>
         <div class="card-body ">
@@ -154,54 +154,10 @@
         </div>
       </div>
     </div>
-    <!-- <div class="col-md-4">
-      <div class="card ">
-        <div class="card-header ">
-          <h5 class="card-title">Projects</h5>
-          <p class="card-category">Last Campaign Performance</p>
-        </div>
-        <div class="card-body ">
-          <canvas id="chartService"></canvas>
-        </div>
-        <div class="card-footer ">
-          <div class="legend">
-            <i class="fa fa-circle text-success"></i> Positive
-            <i class="fa fa-circle text-danger"></i> Negative
-            <i class="fa fa-circle text-warning"></i> Average
-          </div>
-          <hr>
-          <div class="stats">
-            <i class="fa fa-calendar"></i> Since last weeek
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="col-md-4">
-      <div class="card ">
-        <div class="card-header ">
-          <h5 class="card-title">Food</h5>
-          <p class="card-category">Last Campaign Performance</p>
-        </div>
-        <div class="card-body ">
-          <canvas id="chartFood"></canvas>
-        </div>
-        <div class="card-footer ">
-          <div class="legend">
-            <i class="fa fa-circle text-success"></i> Positive
-            <i class="fa fa-circle text-danger"></i> Negative
-            <i class="fa fa-circle text-warning"></i> Average
-          </div>
-          <hr>
-          <div class="stats">
-            <i class="fa fa-calendar"></i> Since last weeek
-          </div>
-        </div>
-      </div>
-    </div> -->
     <div class="col-md-8">
       <div class="card card-chart">
         <div class="card-header">
-          <h5 class="card-title">Tickets Flow</h5> <!-- Line chart to show rising number of tickets in a week -->
+          <h5 class="card-title">Metric 7</h5> <!-- Line chart to show rising number of tickets in a week -->
           <p class="card-category">Line Chart with Points</p>
         </div>
         <div class="card-body">
