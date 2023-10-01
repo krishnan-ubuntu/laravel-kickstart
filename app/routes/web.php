@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('/features');
+Route::get('/features', function () {
+    return view('welcome');
 });
 
 
@@ -31,6 +31,7 @@ Route::get('/logout', 'App\Http\Controllers\web\LoginController@logout');
 
 
 Route::get('/home', 'App\Http\Controllers\web\HomeController@index');
+Route::get('/my-profile', 'App\Http\Controllers\web\HomeController@my_profile');
 
 Route::get('/dashboard', 'App\Http\Controllers\web\DashboardController@index');
 
