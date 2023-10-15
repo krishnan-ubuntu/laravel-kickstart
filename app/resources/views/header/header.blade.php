@@ -48,24 +48,6 @@
                 <p><b>Dashboard</b></p>
               </a>
             </li>
-            <li>
-              <a href="/home">
-                <i class="nc-icon nc-minimal-right"></i>
-                <p><b>Home</b></p>
-              </a>
-            </li>
-            <li>
-              <a href="/admin">
-                <i class="nc-icon nc-minimal-right"></i>
-                <p><b>Admin</b></p>
-              </a>
-            </li>
-            <li>
-              <a href="/reports">
-                <i class="nc-icon nc-minimal-right"></i>
-                <p><b>Reports</b></p>
-              </a>
-            </li>
         </ul>
       </div>
     </div>
