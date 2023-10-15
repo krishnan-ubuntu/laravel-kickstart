@@ -5,7 +5,7 @@
             </nav>
             <div class="credits ml-auto">
               <span class="copyright">
-                &copy; <?php echo date('Y'); ?>, made with <i class="fa fa-heart heart"></i> by Laravel Kickstart<br>
+                &copy; <?php echo date('Y'); ?>, Laravel Kickstart is made with <i class="fa fa-heart heart"></i> by <a href="https://twitter.com/krish_newman" target="_blank">Newman</a><br>
               </span>
             </div>
           </div>
