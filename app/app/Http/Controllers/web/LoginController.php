@@ -4,6 +4,11 @@ namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\LoginPostRequest;
+use App\Models\Companies;
+use App\Models\Users;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Session;
 
 class LoginController extends Controller
@@ -27,32 +32,46 @@ class LoginController extends Controller
             $user_details = '';
 
             if ($validated) {
-                $username    = $request->username;
-                $password    = $request->password;
+                $user_email = $request->userEmail;
+                $user_password = $request->userPassword;
 
-                $user_exists = Users::where('email', '=', $username)->where('role', Users::ADMIN_ROLE)->count();
+                $user_exists = Users::where('email', $user_email)
+                ->where('role', Users::STATUS_ACTIVE)->exists();
 
-                if ($user_exists > 0) {
-                    $user_details = DB::table('users')
-                        ->select('id as user_id', 'company_id', 'fname as user_fname',
-                            'lname as user_lname', 'email as user_email', 'password', 'role as user_role')
-                        ->where('email', '=', $username)
-                        ->where('role', Users::ADMIN_ROLE)
-                        ->first();
+                if ($user_exists) {
+                    // $user_details = DB::table('users')
+                    //     ->select('id as user_id', 'company_id', 'fname as user_fname',
+                    //         'lname as user_lname', 'email as user_email', 'password', 'role as user_role')
+                    //     ->where('email', '=', $username)
+                    //     ->where('role', Users::ADMIN_ROLE)
+                    //     ->first();
 
-                    if (Hash::check($password, $user_details->password)) {
-                        Session::put('userId', $user_details->user_id);
-                        Session::put('companyId', $user_details->company_id);
-                        Session::put('userFname', $user_details->user_fname);
-                        Session::put('userLname', $user_details->user_lname);
-                        Session::put('userEmail', $user_details->user_email);
-                        Session::put('userRole', $user_details->user_role);
-                        Session::put('loginValidated', 'yes');
+                    $user_details = Users::select('id as user_id', 'company_id', 'fname as user_fname',
+                            'lname as user_lname', 'email as user_email', 'password', 'role as user_role', 'salt')
+                    ->where('email', $user_email)
+                    ->where('role', Users::STATUS_ACTIVE)->first();
 
-                        return redirect('/dashboard');
+                    if (empty($user_details)) {
+                        return back()->withError('Unknown username');
                     }
                     else {
-                        return back()->withError('Wrong username/password');
+                        $salt = $user_details->salt;
+                        $pepper = env('PASSWORD_PEPPER');
+                        $salted_peppered_password = $salt.$user_password.$pepper;
+
+                        if (Hash::check($salted_peppered_password, $user_details->password)) {
+                            Session::put('userId', $user_details->user_id);
+                            Session::put('companyId', $user_details->company_id);
+                            Session::put('userFname', $user_details->user_fname);
+                            Session::put('userLname', $user_details->user_lname);
+                            Session::put('userEmail', $user_details->user_email);
+                            Session::put('userRole', $user_details->user_role);
+                            Session::put('loginValidated', 'yes');
+                            return redirect('/dashboard');
+                        }
+                        else {
+                            return back()->withError('Wrong username/password');
+                        }
                     }
                 }
                 else {

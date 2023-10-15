@@ -14,8 +14,14 @@ class CreateCompaniesTable extends Migration
     public function up()
     {
         Schema::create('companies', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->string('admin_fname');
+            $table->string('admin_lname');
+            $table->string('comp_name');
+            $table->string('admin_email');
+            $table->text('confirm_code');
+            $table->string('created_on');
+            $table->tinyInteger('status')->default(0)->comment('0:unverified|1:active|2:suspended|3:unpaid');
         });
     }
 

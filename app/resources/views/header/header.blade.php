@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="static/images/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon/favicon-16x16.png">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
@@ -15,19 +15,19 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 
-  <script src="static/assets/js/lib/jquery-3.4.1.min.js"></script>
-  <script src="static/assets/js/lib/jquery.validate.js"></script>
-  <script src="static/assets/js/core/bootstrap.min.js"></script>
+  <script src="/static/assets/js/lib/jquery-3.4.1.min.js"></script>
+  <script src="/static/assets/js/lib/jquery.validate.js"></script>
+  <script src="/static/assets/js/core/bootstrap.min.js"></script>
 
   <!-- CSS Files -->
-  <link href="static/assets/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="static/assets/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
+  <link href="/static/assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/static/assets/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="static/assets/demo/demo.css" rel="stylesheet" />
+  <link href="/static/assets/demo/demo.css" rel="stylesheet" />
 
-  <script src="static/assets/js/lib/vue.min.js"></script>
-  <script src="static/assets/js/lib/axios.min.js"></script>
-  <script src="static/assets/js/lib/lodash.min.js"></script>
+  <script src="/static/assets/js/lib/vue.min.js"></script>
+  <script src="/static/assets/js/lib/axios.min.js"></script>
+  <script src="/static/assets/js/lib/lodash.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.13/dist/sweetalert2.all.min.js"></script>
 </head>
 
@@ -37,7 +37,7 @@
       <div class="logo">
         <a href="home" class="simple-text logo-normal">
           <p><img id="default_logo" class="img-responsive"
-            src="static/images/logo/team_tasks_logo.png" alt="laravel kickstart logo"></p><br><br>
+            src="/static/images/logo/team_tasks_logo.png" alt="laravel kickstart logo"></p><br><br>
           </a>
         </div>
         <div class="sidebar-wrapper">
@@ -46,24 +46,6 @@
               <a href="/dashboard">
                 <i class="nc-icon nc-minimal-right"></i>
                 <p><b>Dashboard</b></p>
-              </a>
-            </li>
-            <li>
-              <a href="/home">
-                <i class="nc-icon nc-minimal-right"></i>
-                <p><b>Home</b></p>
-              </a>
-            </li>
-            <li>
-              <a href="/admin">
-                <i class="nc-icon nc-minimal-right"></i>
-                <p><b>Admin</b></p>
-              </a>
-            </li>
-            <li>
-              <a href="/reports">
-                <i class="nc-icon nc-minimal-right"></i>
-                <p><b>Reports</b></p>
               </a>
             </li>
         </ul>
@@ -122,5 +104,5 @@
           </div>
         </div>
       </nav>
-<script src="static/assets/js/app/isadmin.js"></script>
-<script src="static/assets/js/app/recent_notifications.js"></script>
+<script src="/static/assets/js/app/isadmin.js"></script>
+<script src="/static/assets/js/app/recent_notifications.js"></script>
